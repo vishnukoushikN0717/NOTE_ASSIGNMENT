@@ -1,0 +1,262 @@
+/* auth.module.css */
+.pageContainer {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.authContainer {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.formWrapper {
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logoSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: #61dafb;
+  font-size: 1rem;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #a0aec0;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  color: #e0e0e0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.labelFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.forgotPassword {
+  color: #61dafb;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgotPassword:hover {
+  color: #4fa8d1;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #3d3d3d;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #61dafb;
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.input::placeholder {
+  color: #6b7280;
+}
+
+.button {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #61dafb;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #4fa8d1;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footerText {
+  color: #a0aec0;
+  margin-right: 0.5rem;
+}
+
+.footerLink {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #4fa8d1;
+}
+
+/* Alert styles */
+.alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.alertError {
+  background-color: rgba(254, 178, 178, 0.1);
+  border: 1px solid #fc8181;
+  color: #fc8181;
+}
+
+.alertSuccess {
+  background-color: rgba(154, 230, 180, 0.1);
+  border: 1px solid #68d391;
+  color: #68d391;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .formWrapper {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+}
+
+/* Add these to your existing auth.module.css */
+
+.passwordHint {
+  color: #a0aec0;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.formWrapper {
+  /* Update max-height for registration form */
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Add custom scrollbar for the form wrapper */
+.formWrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.formWrapper::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.formWrapper::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 3px;
+}
+
+.formWrapper::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+/* Add some spacing for the registration form */
+.authForm {
+  padding-bottom: 1rem;
+}
+
+/* Make sure the form doesn't get too tall on smaller screens */
+@media (max-height: 800px) {
+  .formWrapper {
+    padding: 1.5rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    margin-bottom: 0.25rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+}
